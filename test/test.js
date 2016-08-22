@@ -22,6 +22,5 @@ test('main', (t) => {
     const errors = runEslint('\'use strict\';\nconsole.log("travix international")\n', conf);
 
     t.is(errors[0].ruleId, 'no-console');
-    t.is(errors[1].ruleId, 'quotes');
-    t.is(errors[2].ruleId, 'semi');
+    t.is(errors[1].ruleId, 'semi');
 });
