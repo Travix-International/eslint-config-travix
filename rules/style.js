@@ -1,8 +1,8 @@
 module.exports = require('eslint-config-airbnb-base/rules/style');
 
-module.exports['indent'] = 2;
-module.exports['max-len'] = [0, 120, 4, { ignoreUrls: true }];
-module.exports['operator-linebreak'] = [1, 'after', {
+module.exports['rules']['indent'] = 2;
+module.exports['rules']['max-len'] = [0, 10, 4, { ignoreUrls: true }];
+module.exports['rules']['operator-linebreak'] = [1, 'after', {
   overrides: {
     '?': 'before',
     ':': 'before',
@@ -12,6 +12,6 @@ module.exports['operator-linebreak'] = [1, 'after', {
     '+': 'ignore'
   }
 }];
-module.exports['quotes'] = 0;
-module.exports['quote-props'] = [0, 'consistent'];
-module.exports['strict'] = 0;
+module.exports['rules']['quotes'] = 0;
+module.exports['rules']['quote-props'] = [0, 'consistent'];
+module.exports['rules']['strict'] = 0;
