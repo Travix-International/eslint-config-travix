@@ -24,3 +24,12 @@ test('main', (t) => {
     t.is(errors[0].ruleId, 'no-console');
     t.is(errors[1].ruleId, 'semi');
 });
+
+test('travix-specific', (t) => {
+    const conf = require('../');
+
+    const errors = runEslint('if (err) alert(\'curly\');', conf);
+
+    // These are Travix-specific errors, which don't come from airbnb, so this tests if our custom rules are picked up.
+    t.is(errors[0].ruleId, 'curly');
+});
