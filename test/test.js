@@ -32,4 +32,5 @@ test('travix-specific', (t) => {
 
     // These are Travix-specific errors, which don't come from airbnb, so this tests if our custom rules are picked up.
     t.is(errors[0].ruleId, 'curly');
+    t.is(errors[0].severity, 1);
 });

@@ -14,5 +14,5 @@ module.exports['rules']['operator-linebreak'] = [1, 'after', {
 }];
 module.exports['rules']['quotes'][0] = 0;
 module.exports['rules']['quote-props'] = [0, 'consistent'];
-module.exports['rules']['curly'] = [2, 'all'];
+module.exports['rules']['curly'] = [1, 'all'];
 module.exports['rules']['strict'] = 0;
