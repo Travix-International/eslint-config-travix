@@ -23,14 +23,6 @@ For `react`, you will also need `eslint-plugin-react`:
 $ npm install --save-dev eslint-plugin-react
 ```
 
-### Note for npm v2.x
-
-If you are still using npm v2.x, then just installing the package would bring in all other peer dependencies for you automatically:
-
-```js
-$ npm install --save eslint-config-travix
-```
-
 ## Usage
 
 Add some ESLint config to your `package.json`:
