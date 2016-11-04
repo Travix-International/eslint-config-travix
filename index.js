@@ -7,5 +7,10 @@ module.exports = {
     './base',
     './react'
   ].map(require.resolve),
-  rules: {}
+  rules: {},
+  settings: {
+    react: {
+      pragma: 'React'
+    }
+  }
 };
