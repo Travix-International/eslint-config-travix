@@ -34,7 +34,7 @@
     "eslint": "^3.1.0",
     "eslint-plugin-babel": "^3.3.0",
     "eslint-plugin-import": "^1.11.0",
-    "eslint-plugin-react": "^5.2.2",
+    "eslint-plugin-react": "^6.5.0",
     "is-plain-obj": "^1.1.0",
     "temp-write": "^2.1.0"
   },
