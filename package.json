@@ -26,14 +26,14 @@
   ],
   "dependencies": {
     "deep-assign": "^2.0.0",
-    "eslint-config-airbnb-base": "^4.0.2"
+    "eslint-config-airbnb-base": "^9.0.0"
   },
   "devDependencies": {
     "ava": "^0.15.2",
     "babel-eslint": "^6.1.2",
     "eslint": "^3.1.0",
     "eslint-plugin-babel": "^3.3.0",
-    "eslint-plugin-import": "^1.11.0",
+    "eslint-plugin-import": "^2.1.0",
     "eslint-plugin-react": "^6.5.0",
     "is-plain-obj": "^1.1.0",
     "temp-write": "^2.1.0"

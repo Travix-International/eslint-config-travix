@@ -19,7 +19,7 @@ test('main', (t) => {
     t.true(isPlainObj(conf.env));
     t.true(isPlainObj(conf.rules));
 
-    const errors = runEslint('\'use strict\';\nconsole.log("travix international")\n', conf);
+    const errors = runEslint('\n\'use strict\';\n\nconsole.log("travix international")\n', conf);
 
     t.is(errors[0].ruleId, 'no-console');
     t.is(errors[1].ruleId, 'semi');
