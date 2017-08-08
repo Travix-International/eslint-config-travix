@@ -26,7 +26,8 @@
   ],
   "dependencies": {
     "deep-assign": "^2.0.0",
-    "eslint-config-airbnb-base": "^11.0.0"
+    "eslint-config-airbnb-base": "^11.0.0",
+    "eslint-plugin-promise": "^3.5.0"
   },
   "devDependencies": {
     "ava": "^0.16.0",
