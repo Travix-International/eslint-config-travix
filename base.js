@@ -7,7 +7,6 @@ module.exports = {
     './rules/variables',
     './rules/es6',
     './rules/imports',
-    './rules/promises',
   ].map(require.resolve),
   parserOptions: {
     ecmaVersion: 7,

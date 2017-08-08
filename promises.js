@@ -1,6 +1,6 @@
 module.exports = {
   plugins: [
-    'eslint-plugin-promise',
+    'promise',
   ],
   rules: {
     "promise/always-return": 'error',
