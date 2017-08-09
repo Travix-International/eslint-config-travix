@@ -15,13 +15,19 @@ For ES6 you'll also need Babel's [Core](https://www.npmjs.com/package/babel-core
 and [plugin](https://github.com/babel/eslint-plugin-babel):
 
 ```
-$ npm install --save-dev babel-core babel-eslint eslint-plugin-babel eslint-plugin-import
+$ npm install --save-dev babel-core babel-eslint eslint-plugin-babel eslint-plugin-promise eslint-plugin-import
 ```
 
 For `react`, you will also need `eslint-plugin-react`:
 
 ```
 $ npm install --save-dev eslint-plugin-react
+```
+
+For the ES6 `promises`, it is required to install [`eslint-plugin-promise`](https://github.com/xjamundx/eslint-plugin-promise)
+
+```
+$ npm install --save-dev eslint-plugin-promises
 ```
 
 ## Usage
@@ -58,6 +64,20 @@ And [`travix/react`](react.js) if you want React application to be linted:
 }
 ```
 
+### Promises
+
+And [`travix/promises`](promises.js)
+
+```json
+{
+  "extends": [
+    "travix/base",
+    "travix/promises",
+    "travix/react"
+  ]
+}
+```
+
 ### Multiple configs
 
 You can combine multiple configs together:
@@ -68,7 +88,7 @@ You can combine multiple configs together:
     "travix/rules/best-practices",
     "travix/rules/es6",
     "travix/rules/node",
-
+    "travix/promises",
     "travix/react"
   ]
 }
