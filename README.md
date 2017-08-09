@@ -15,7 +15,7 @@ For ES6 you'll also need Babel's [Core](https://www.npmjs.com/package/babel-core
 and [plugin](https://github.com/babel/eslint-plugin-babel):
 
 ```
-$ npm install --save-dev babel-core babel-eslint eslint-plugin-babel eslint-plugin-promise eslint-plugin-import
+$ npm install --save-dev babel-core babel-eslint eslint-plugin-babel eslint-plugin-import
 ```
 
 For `react`, you will also need `eslint-plugin-react`:
