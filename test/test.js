@@ -34,3 +34,18 @@ test('travix-specific', (t) => {
     t.is(errors[0].ruleId, 'curly');
     t.is(errors[0].severity, 1);
 });
+
+test('promises', (t) => {
+  const conf = require('../');
+
+  const errors = runEslint('\n\'use strict\';\n\nconst t = () => new Promise((r, re) => {\n  console.log(re);\n  r();\n});\nt.then(r => { console.log(r); r(); });\n', conf);
+
+  t.is(errors[0].ruleId, 'promise/param-names');
+  t.is(errors[0].severity, 2);
+
+  t.is(errors[2].ruleId, 'promise/catch-or-return');
+  t.is(errors[2].severity, 2);
+
+  t.is(errors[4].ruleId, 'promise/always-return');
+  t.is(errors[4].severity, 2);
+});
