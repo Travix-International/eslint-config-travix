@@ -5,7 +5,8 @@ module.exports = {
   },
   extends: [
     './base',
-    './react'
+    './react',
+    './promises',
   ].map(require.resolve),
   rules: {},
   settings: {
