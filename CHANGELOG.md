@@ -1,5 +1,13 @@
 # Change Log
 
+## [v2.3.2](https://github.com/Travix-International/eslint-config-travix/tree/v2.3.2) (2017-02-06)
+[Full Changelog](https://github.com/Travix-International/eslint-config-travix/compare/v2.3.1...v2.3.2)
+
+**Merged pull requests:**
+
+- Update temp-write to the latest version 🚀 [\#11](https://github.com/Travix-International/eslint-config-travix/pull/11) ([greenkeeper[bot]](https://github.com/integration/greenkeeper))
+- Update eslint-config-airbnb-base to the latest version 🚀 [\#10](https://github.com/Travix-International/eslint-config-travix/pull/10) ([greenkeeper[bot]](https://github.com/integration/greenkeeper))
+
 ## [v2.3.1](https://github.com/Travix-International/eslint-config-travix/tree/v2.3.1) (2016-11-22)
 [Full Changelog](https://github.com/Travix-International/eslint-config-travix/compare/v2.3.0...v2.3.1)
 
