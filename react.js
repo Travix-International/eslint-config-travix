@@ -56,12 +56,11 @@ module.exports = {
 
     // Prevent usage of .bind() in JSX props
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md
-    // 'react/jsx-no-bind': [2, {
-    //   ignoreRefs: true,
-    //   allowArrowFunctions: true,
-    //   allowBind: false,
-    // }],
-    'react/jsx-no-bind': [1, { allowArrowFunctions: true }],
+    'react/jsx-no-bind': [2, {
+      ignoreRefs: true,
+      allowArrowFunctions: false,
+      allowBind: false,
+    }],
 
     // Prevent duplicate props in JSX
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-duplicate-props.md
@@ -84,8 +83,8 @@ module.exports = {
 
     // Enforce propTypes declarations alphabetical sorting
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/sort-prop-types.md
-    'react/sort-prop-types': [0, {
-      ignoreCase: false,
+    'react/sort-prop-types': [2, {
+      ignoreCase: true,
       callbacksLast: false,
     }],
 
@@ -223,7 +222,27 @@ module.exports = {
     // Disallow target="_blank" on links
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-target-blank.md
     // TODO: enable
-    'react/jsx-no-target-blank': 0
+    'react/jsx-no-target-blank': 0,
+
+    // Validate whitespace in and around the JSX opening and closing brackets
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-tag-spacing.md
+    'react/jsx-tag-spacing': [2, {
+      'beforeSelfClosing': 'always',
+    }],
+
+    // Prevent definitions of unused prop types
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unused-prop-types.md
+    'react/no-unused-prop-types': 2,
+
+    // Enforce all defaultProps have a corresponding non-required PropType
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/default-props-match-prop-types.md
+    'react/default-props-match-prop-types': [2, {
+      'allowRequiredDefaults': true,
+    }],
+
+    // Enforce a defaultProps definition for every prop that is not a required prop
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-default-props.md
+    'react/require-default-props': 2,
   },
 
   settings: {
