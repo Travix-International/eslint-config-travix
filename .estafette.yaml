@@ -21,5 +21,5 @@ stages:
       - npx semantic-release --noCi false
     when:
       status == 'succeeded' &&
-      branch == '5.x'
+      branch == 'master'
 

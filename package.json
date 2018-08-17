@@ -33,7 +33,6 @@
     "simple-commit-message": "~4.0.3"
   },
   "release": {
-    "branch": "5.x",
     "analyzeCommits": "simple-commit-message"
   }
 }
