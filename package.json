@@ -33,6 +33,7 @@
     "simple-commit-message": "~4.0.3"
   },
   "release": {
-    "analyzeCommits": "simple-commit-message"
+    "analyzeCommits": "simple-commit-message",
+    "noCi": true
   }
 }
