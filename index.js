@@ -3,14 +3,14 @@ module.exports = {
     browser: true,
     es6: true,
     node: true,
-    jest: true
+    jest: true,
   },
   parserOptions: {
     ecmaVersion: 6,
     sourceType: 'module',
     ecmaFeatures: {
-      defaultParams: true
-    }
+      defaultParams: true,
+    },
   },
   extends: [
     'eslint:recommended',
@@ -18,6 +18,6 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:import/errors',
     'plugin:import/warnings',
-    'plugin:jsx-a11y/recommended'
-  ]
+    'plugin:jsx-a11y/recommended',
+  ],
 };
