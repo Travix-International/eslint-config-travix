@@ -17,20 +17,20 @@
     "name": "Travix International",
     "url": "https://travix.com"
   },
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Travix-International/eslint-config-travix/issues"
   },
   "homepage": "https://github.com/Travix-International/eslint-config-travix#readme",
   "devDependencies": {
-    "babel-eslint": "~8.2.6",
-    "eslint": "~5.3.0",
-    "eslint-config-airbnb": "~17.1.0",
-    "eslint-plugin-import": "~2.14.0",
-    "eslint-plugin-jsx-a11y": "~6.1.1",
-    "eslint-plugin-react": "~7.11.1",
-    "semantic-release": "~15.9.8",
-    "simple-commit-message": "~4.0.3"
+    "babel-eslint": "8.2.6",
+    "eslint": "5.3.0",
+    "eslint-config-airbnb": "17.1.0",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-jsx-a11y": "6.1.1",
+    "eslint-plugin-react": "7.11.1",
+    "semantic-release": "15.9.8",
+    "simple-commit-message": "4.0.3"
   },
   "release": {
     "analyzeCommits": "simple-commit-message",
