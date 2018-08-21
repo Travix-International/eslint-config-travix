@@ -8,13 +8,10 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 6,
     sourceType: 'module',
-    ecmaFeatures: {
-      defaultParams: true,
-    },
   },
   extends: [
-    'eslint:recommended',
     'airbnb',
+    'eslint:recommended',
     'plugin:react/recommended',
     'plugin:import/errors',
     'plugin:import/warnings',

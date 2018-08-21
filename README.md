@@ -1,5 +1,5 @@
-# eslint-config-travix (v.5)
-New version of [ESLint](https://eslint.org/) configuration for Travix International (v.5)
+# eslint-config-travix
+[ESLint](https://eslint.org/) configuration for Travix International (v.5)
 
 ## What this config extends
 * `eslint:recommended`
@@ -8,6 +8,12 @@ New version of [ESLint](https://eslint.org/) configuration for Travix Internatio
 * `plugin:import/errors`
 * `plugin:import/warnings`
 * `plugin:jsx-a11y/recommended`
+
+## Installation
+This configuration requires a list of peer dependencies installed also. You can install the main package and all of the peer dependencies within the following command:
+```
+npx install-peerdeps -d eslint-config-travix
+```
 
 ## Usage
 You can create a `.eslintrc` file with the following content:
