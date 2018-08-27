@@ -1,5 +1,5 @@
 # eslint-config-travix
-[ESLint](https://eslint.org/) configuration for Travix International (v.5)
+[ESLint](https://eslint.org/) configuration for Travix International
 
 ## What this config extends
 * `eslint:recommended`
@@ -40,3 +40,6 @@ We use [simple-commit-message](https://github.com/bahmutov/simple-commit-message
 * `fix: <MESSAGE>` - does release `patch` version of NPM module. Alias - `patch: <MESSAGE>`
 * `minor: <MESSAGE>` - releases `minor` version. Alias - `feat: <MESSAGE>`
 * `major: <MESSAGE>` - releases `major` version. Alias - `break: <MESSAGE>`
+
+## Previous version
+Previous major version (4) is on branch [`4.x`](https://github.com/Travix-International/eslint-config-travix/tree/4.x). You can open PR pointing to that branch in case you want to release a minor or patch release of version 4. FYI: automatic release will not be working there, it's integrated only in v.5
