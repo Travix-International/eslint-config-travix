@@ -17,6 +17,7 @@ module.exports = {
     'plugin:jsx-a11y/recommended',
   ],
   rules: {
+    'lines-between-class-members': ['error', 'always', { 'exceptAfterSingleLine': true }],
     'max-len': ['error', {
       'code': 120,
       'ignoreStrings': true,
