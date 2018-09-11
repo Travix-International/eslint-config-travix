@@ -25,9 +25,9 @@ module.exports = {
       'ignoreTrailingComments': true,
       'ignoreRegExpLiterals': true
     }],
-    'react/forbid-prop-types': [1, { 'forbid': ['any'] }],
-    'react/jsx-sort-props': [1],
-    'react/jsx-filename-extension': [1, { 'extensions': ['.js'] }],
-    "react/jsx-one-expression-per-line": 0,
+    'react/forbid-prop-types': ['error', { 'forbid': ['any'] }],
+    'react/jsx-sort-props': ['error'],
+    'react/jsx-filename-extension': ['error', { 'extensions': ['.js'] }],
+    "react/jsx-one-expression-per-line": 'off',
   }
 };
