@@ -19,7 +19,7 @@ module.exports = {
   rules: {
     'lines-between-class-members': ['error', 'always', { 'exceptAfterSingleLine': true }],
     'max-len': ['error', {
-      'code': 120,
+      'code': 100,
       'ignoreStrings': true,
       'ignoreTemplateLiterals': true,
       'ignoreUrls': true,
