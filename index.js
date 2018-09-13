@@ -29,6 +29,16 @@ module.exports = {
     'react/forbid-prop-types': ['error', { 'forbid': ['any'] }],
     'react/jsx-sort-props': ['error'],
     'react/jsx-filename-extension': ['error', { 'extensions': ['.js'] }],
-    "react/jsx-one-expression-per-line": 'off',
+    'react/jsx-one-expression-per-line': 'off',
+    'react/sort-comp': ['error', {
+      'order': [
+        'static-methods',
+        'type-annotations',
+        'instance-variables',
+        'lifecycle',
+        'everything-else',
+        'render'
+      ]
+    }]
   }
 };
