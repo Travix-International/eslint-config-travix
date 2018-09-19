@@ -17,21 +17,22 @@ module.exports = {
     'plugin:jsx-a11y/recommended',
   ],
   rules: {
-    'lines-between-class-members': ['error', 'always', { 'exceptAfterSingleLine': true }],
+    'lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
     'max-len': ['error', {
-      'code': 100,
-      'ignoreStrings': true,
-      'ignoreTemplateLiterals': true,
-      'ignoreUrls': true,
-      'ignoreTrailingComments': true,
-      'ignoreRegExpLiterals': true
+      code: 100,
+      ignoreStrings: true,
+      ignoreTemplateLiterals: true,
+      ignoreUrls: true,
+      ignoreTrailingComments: true,
+      ignoreRegExpLiterals: true
     }],
-    'react/forbid-prop-types': ['error', { 'forbid': ['any'] }],
+    'react/destructuring-assignment': ['error', 'always', { ignoreClassFields: true }],
+    'react/forbid-prop-types': ['error', { forbid: ['any'] }],
     'react/jsx-sort-props': ['error'],
-    'react/jsx-filename-extension': ['error', { 'extensions': ['.js'] }],
+    'react/jsx-filename-extension': ['error', { extensions: ['.js'] }],
     'react/jsx-one-expression-per-line': 'off',
     'react/sort-comp': ['error', {
-      'order': [
+      order: [
         'static-methods',
         'type-annotations',
         'instance-variables',
