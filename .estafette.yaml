@@ -22,5 +22,6 @@ stages:
       - npm run build
       - npx semantic-release
     when:
-      status == 'succeeded'
+      status == 'succeeded' &&
+      branch == 'master'
 
