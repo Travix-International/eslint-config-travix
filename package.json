@@ -46,6 +46,7 @@
   "release": {
     "analyzeCommits": "simple-commit-message",
     "noCi": true,
+    "branch": "migrate-to-ts",
     "pkgRoot": "lib",
     "prepare": [
       "@semantic-release/changelog",
