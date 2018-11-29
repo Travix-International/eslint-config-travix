@@ -6,7 +6,10 @@
     "jsRules": {},
     "rules": {
       "trailing-comma": true,
-      "quotemark": false
+      "quotemark": [
+        true,
+        "single"
+      ]
     },
     "rulesDirectory": [],
     "linterOptions": {}
