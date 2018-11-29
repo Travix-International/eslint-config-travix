@@ -2,8 +2,11 @@
   "name": "eslint-config-travix",
   "version": "5.0.0",
   "description": "ESLint configuration for Travix International",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
+    "copy:package": "cpy package*.json ./lib",
+    "lint": "tslint",
+    "build": "rimraf lib && tsc && npm run copy:package",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,14 +26,15 @@
   },
   "homepage": "https://github.com/Travix-International/eslint-config-travix#readme",
   "devDependencies": {
-    "babel-eslint": "8.2.6",
-    "eslint": "5.3.0",
-    "eslint-config-airbnb": "17.1.0",
-    "eslint-plugin-import": "2.14.0",
-    "eslint-plugin-jsx-a11y": "6.1.1",
-    "eslint-plugin-react": "7.11.1",
+    "@semantic-release/changelog": "3.0.1",
+    "@semantic-release/git": "7.0.5",
+    "@types/node": "10.12.10",
+    "cpy-cli": "2.0.0",
+    "rimraf": "2.6.2",
     "semantic-release": "15.9.8",
-    "simple-commit-message": "4.0.3"
+    "simple-commit-message": "4.0.3",
+    "tslint": "5.11.0",
+    "typescript": "3.1.6"
   },
   "peerDependencies": {
     "eslint-config-airbnb": "^17.1.0",
@@ -40,6 +44,19 @@
   },
   "release": {
     "analyzeCommits": "simple-commit-message",
-    "noCi": true
+    "noCi": true,
+    "pkgRoot": "lib",
+    "prepare": [
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      {
+        "path": "@semantic-release/exec",
+        "cmd": "cp -f dist/package.json dist/package-lock.json ."
+      },
+      {
+        "path": "@semantic-release/git",
+        "message": "Release: ${nextRelease.version}\n\n${nextRelease.notes}"
+      }
+    ]
   }
 }

@@ -1,3 +1,6 @@
+# Dynamic build
+lib
+
 # Logs
 logs
 *.log

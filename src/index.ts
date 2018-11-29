@@ -1,13 +1,9 @@
-module.exports = {
+const config: object = {
   env: {
     browser: true,
     es6: true,
-    node: true,
     jest: true,
-  },
-  parserOptions: {
-    ecmaVersion: 6,
-    sourceType: 'module',
+    node: true,
   },
   extends: [
     'airbnb',
@@ -16,15 +12,29 @@ module.exports = {
     'plugin:import/warnings',
     'plugin:jsx-a11y/recommended',
   ],
+  parserOptions: {
+    ecmaVersion: 6,
+    sourceType: 'module',
+  },
   rules: {
+    'import/order': [
+      'error',
+      {
+        'groups': [
+          ['builtin', 'external'],
+          ['sibling', 'parent', 'internal', 'index'],
+        ],
+        'newlines-between': 'always',
+      },
+    ],
     'lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
     'max-len': ['error', {
       code: 100,
+      ignoreRegExpLiterals: true,
       ignoreStrings: true,
       ignoreTemplateLiterals: true,
-      ignoreUrls: true,
       ignoreTrailingComments: true,
-      ignoreRegExpLiterals: true,
+      ignoreUrls: true,
     }],
     'prefer-destructuring': ['error', {
       array: true,
@@ -32,21 +42,11 @@ module.exports = {
     }, {
       enforceForRenamedProperties: false,
     }],
-    'import/order': [
-      'error',
-      {
-        groups: [
-          ['builtin', 'external'],
-          ['sibling', 'parent', 'internal', 'index'],
-        ],
-        'newlines-between': 'always',
-      },
-    ],
     'react/destructuring-assignment': ['error', 'always', { ignoreClassFields: true }],
     'react/forbid-prop-types': ['error', { forbid: ['any'] }],
-    'react/jsx-sort-props': ['error'],
     'react/jsx-filename-extension': ['error', { extensions: ['.js'] }],
     'react/jsx-one-expression-per-line': 'off',
+    'react/jsx-sort-props': ['error'],
     'react/sort-comp': ['error', {
       order: [
         'static-methods',
@@ -59,3 +59,5 @@ module.exports = {
     }],
   },
 };
+
+module.exports = config;
