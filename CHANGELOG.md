@@ -1,3 +1,10 @@
+## [5.6.1](https://github.com/Travix-International/eslint-config-travix/compare/v5.6.0...v5.6.1) (2018-11-29)
+
+
+### Bug Fixes
+
+* Migrate to typescript ([8931b79](https://github.com/Travix-International/eslint-config-travix/commit/8931b79))
+
 # Change Log
 
 ## [v4.0.0](https://github.com/Travix-International/eslint-config-travix/tree/v4.0.0) (2017-12-18)
