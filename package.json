@@ -53,7 +53,7 @@
       "@semantic-release/npm",
       {
         "path": "@semantic-release/exec",
-        "cmd": "cp -f dist/package.json dist/package-lock.json ."
+        "cmd": "cp -f lib/package.json lib/package-lock.json ."
       },
       {
         "path": "@semantic-release/git",
