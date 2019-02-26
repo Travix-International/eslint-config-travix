@@ -3,6 +3,9 @@
   "version": "5.6.1",
   "description": "ESLint configuration for Travix International",
   "main": "lib/index.js",
+  "engines": {
+    "node": ">=10"
+  },
   "scripts": {
     "copy:package": "cpy package*.json ./lib",
     "lint": "tslint src/**/*.ts",
@@ -26,16 +29,20 @@
   },
   "homepage": "https://github.com/Travix-International/eslint-config-travix#readme",
   "devDependencies": {
-    "@semantic-release/changelog": "3.0.1",
-    "@semantic-release/exec": "3.3.0",
-    "@semantic-release/git": "7.0.5",
+    "@semantic-release/changelog": "3.0.2",
+    "@semantic-release/exec": "3.3.2",
+    "@semantic-release/git": "7.0.8",
     "@types/node": "10.12.10",
     "cpy-cli": "2.0.0",
-    "rimraf": "2.6.2",
-    "semantic-release": "15.9.8",
+    "eslint-config-airbnb": "17.1.0",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-jsx-a11y": "6.1.1",
+    "eslint-plugin-react": "7.11.1",
+    "rimraf": "2.6.3",
+    "semantic-release": "15.13.4",
     "simple-commit-message": "4.0.3",
-    "tslint": "5.11.0",
-    "typescript": "3.1.6"
+    "tslint": "5.13.0",
+    "typescript": "3.3.3"
   },
   "peerDependencies": {
     "eslint-config-airbnb": "^17.1.0",
