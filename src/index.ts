@@ -42,6 +42,8 @@ const config: object = {
     }, {
       enforceForRenamedProperties: false,
     }],
+    'react-hooks/exhaustive-deps': 'error',
+    'react-hooks/rules-of-hooks': 'error',
     'react/destructuring-assignment': ['error', 'always', { ignoreClassFields: true }],
     'react/forbid-prop-types': ['error', { forbid: ['any'] }],
     'react/jsx-filename-extension': ['error', { extensions: ['.js'] }],
@@ -57,8 +59,6 @@ const config: object = {
         'render',
       ],
     }],
-    'react-hooks/exhaustive-deps': 'error',
-    'react-hooks/rules-of-hooks': 'error',
   },
 };
 
