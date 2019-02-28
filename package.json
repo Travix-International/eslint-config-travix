@@ -8,9 +8,20 @@
   },
   "scripts": {
     "copy:package": "cpy package*.json ./lib",
-    "lint": "tslint src/**/*.ts",
+    "lint": "tslint -p tsconfig.json",
     "build": "rimraf lib && tsc && npm run copy:package",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.ts": [
+      "npm run lint -- --fix",
+      "git add"
+    ]
   },
   "repository": {
     "type": "git",
