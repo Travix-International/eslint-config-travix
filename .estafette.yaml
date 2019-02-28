@@ -9,6 +9,21 @@ stages:
     commands:
       - npm audit --audit-level=critical
 
+  install:
+    image: node:dubnium-alpine
+    commands:
+      - npm ci
+
+  lint:
+    image: node:dubnium-alpine
+    commands:
+      - npm run lint
+
+  build:
+    image: node:dubnium-alpine
+    commands:
+      - npm run build
+
   release:
     image: travix/npm-agent:dubnium-alpine
     env:
@@ -22,9 +37,6 @@ stages:
       # travix/npm-agent:dubnium-alpine does not come with ssh, and semantic-release
       # has some troubles using the token-authenticated HTTPS remote URLs
       - apk --no-cache add openssh
-      - npm ci
-      - npm run lint
-      - npm run build
       - npx semantic-release
     when:
       status == 'succeeded' &&
