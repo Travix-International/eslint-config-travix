@@ -36,6 +36,7 @@ const config: object = {
       ignoreTrailingComments: true,
       ignoreUrls: true,
     }],
+    'max-params': ['error', 3],
     'prefer-destructuring': ['error', {
       array: true,
       object: true,
