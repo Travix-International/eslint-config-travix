@@ -22,7 +22,7 @@ const config: object = {
       {
         'groups': [
           ['builtin', 'external'],
-          ['sibling', 'parent', 'internal', 'index'],
+          ['sibling', 'parent', 'internal', 'index', 'unknown'],
         ],
         'newlines-between': 'always',
       },
