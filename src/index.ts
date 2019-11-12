@@ -52,8 +52,9 @@ const config: object = {
     'react/jsx-sort-props': ['error'],
     'react/sort-comp': ['error', {
       order: [
-        'static-methods',
         'type-annotations',
+        'static-variables',
+        'static-methods',
         'instance-variables',
         'lifecycle',
         'everything-else',
