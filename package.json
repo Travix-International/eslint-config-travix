@@ -4,7 +4,7 @@
   "description": "ESLint configuration for Travix International",
   "main": "lib/index.js",
   "engines": {
-    "node": ">=10"
+    "node": ">=12"
   },
   "scripts": {
     "copy:package": "cpy package*.json ./lib",

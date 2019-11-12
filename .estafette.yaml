@@ -5,27 +5,27 @@ labels:
 
 stages:
   audit:
-    image: node:dubnium-alpine
+    image: node:erbium-alpine
     commands:
       - npm audit --audit-level=critical
 
   install:
-    image: node:dubnium-alpine
+    image: node:erbium-alpine
     commands:
       - npm ci
 
   lint:
-    image: node:dubnium-alpine
+    image: node:erbium-alpine
     commands:
       - npm run lint
 
   build:
-    image: node:dubnium-alpine
+    image: node:erbium-alpine
     commands:
       - npm run build
 
   release:
-    image: travix/npm-agent:dubnium-alpine
+    image: travix/npm-agent:erbium-alpine
     env:
       NPM_TOKEN: estafette.secret(zLzuU8X5xWRB_vm6.K6U64ManpNZ89nc6GGPI7b-fzy2R_Vuhs-veDE47S1ztm_JxJqRGuHznAbtoUat4q_UXhQ==)
       GH_TOKEN: estafette.secret(qnT0Xj4IaUsYKb4c.wmhSyuv6-kvK0LuvAQAe3NovxitW1ORMBohzfiV5u9ZrCQvOix9FEshNiyiR8htQ070KeLli9Mo=)
@@ -34,9 +34,6 @@ stages:
       GIT_COMMITTER_NAME: 'travix-frontend-services'
       GIT_COMMITTER_EMAIL: 'frontend-services@travix.com'
     commands:
-      # travix/npm-agent:dubnium-alpine does not come with ssh, and semantic-release
-      # has some troubles using the token-authenticated HTTPS remote URLs
-      - apk --no-cache add openssh bash
       - npx semantic-release
     when:
       status == 'succeeded' &&
