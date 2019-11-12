@@ -61,7 +61,8 @@ const config: object = {
         'render',
       ],
     }],
-    'react/state-in-constructor': 'off'
+    'react/state-in-constructor': 'off',
+    'react/static-property-placement': ['error', 'static public field'],
   },
 };
 
