@@ -61,6 +61,7 @@ const config: object = {
         'render',
       ],
     }],
+    'react/state-in-constructor': 'off'
   },
 };
 
