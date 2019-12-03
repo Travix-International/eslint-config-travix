@@ -4,25 +4,41 @@ labels:
   language: nodejs
 
 stages:
-  audit:
-    image: node:erbium-alpine
-    commands:
-      - npm audit --audit-level=critical
+  prepare:
+    parallelStages:
+      audit-acceptance:
+        image: extensions/npm-audit:stable
+        action: audit
+        level: high
+        dev-level: critical
+        when: status == 'succeeded' && branch != 'master'
 
-  install:
-    image: node:erbium-alpine
-    commands:
-      - npm ci
+      audit:
+        image: extensions/npm-audit:stable
+        action: audit
+        level: high
+        dev-level: critical
+        workspace: travix
+        channels:
+          - '#dynamicweb-audits'
+        when: status == 'succeeded' && branch == 'master'
 
-  lint:
-    image: node:erbium-alpine
-    commands:
-      - npm run lint
+      install:
+        image: travix/npm-agent:erbium-alpine
+        commands:
+          - npm ci
 
-  build:
-    image: node:erbium-alpine
-    commands:
-      - npm run build
+  lint-and-build:
+    parallelStages:
+      lint:
+        image: travix/npm-agent:erbium-alpine
+        commands:
+          - npm run lint
+
+      build:
+        image: travix/npm-agent:erbium-alpine
+        commands:
+          - npm run build
 
   release:
     image: travix/npm-agent:erbium-alpine
@@ -38,3 +54,10 @@ stages:
     when:
       status == 'succeeded' &&
       branch == 'master'
+
+  slack-notify:
+    image: extensions/slack-build-status:stable
+    workspace: travix
+    channels:
+      - '#dynamicweb-builds'
+    when: branch == 'master'
