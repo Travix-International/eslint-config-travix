@@ -12,10 +12,14 @@ const config: object = {
     'plugin:import/warnings',
     'plugin:jsx-a11y/recommended',
   ],
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 6,
     sourceType: 'module',
   },
+  plugins: [
+    '@typescript-eslint',
+  ],
   rules: {
     'import/order': [
       'error',
