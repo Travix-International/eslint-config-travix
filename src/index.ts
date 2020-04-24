@@ -19,14 +19,8 @@ const config: object = {
       rules: {
         // These are already checked by Typescript
         'import/no-unresolved': 'off',
-        'no-restricted-globals': 'off',
-        'no-undef': 'off',
         'no-unused-vars': 'off',
-        'no-useless-constructor': 'off',
-        'react/default-props-match-prop-types': 'off',
-        'react/display-name': 'off',
         'react/prop-types': 'off',
-        'space-infix-ops': 'off'
       }
     },
   ],
