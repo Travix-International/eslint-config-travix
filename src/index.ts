@@ -17,9 +17,12 @@ const config: object = {
     {
       files: ['*.ts', '*.tsx'],
       rules: {
+        '@typescript-eslint/no-useless-constructor': ['error'],
+
         // These are already checked by Typescript
         'import/no-unresolved': 'off',
         'no-unused-vars': 'off',
+        'no-useless-constructor': 'off',
         'react/prop-types': 'off',
       }
     },
